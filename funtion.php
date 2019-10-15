@@ -1,6 +1,6 @@
 <?php 
 	
-	function query($sql)
+	function query($sql,$result)
 	{
 		$db = parse_url(getenv("DATABASE_URL"));
 	
