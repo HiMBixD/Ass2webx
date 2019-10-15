@@ -1,10 +1,10 @@
 
 <div class="head">
 	<div class="homeicon">
-		<a href="./home.php"><img src="./images/IconShop.bmp"></a>
+		<a href="./index.php"><img src="./images/IconShop.bmp"></a>
 	</div>
 	<div class="search">
-		<form action="./home.php" class="searchform">			
+		<form action="./index.php" class="searchform">			
 			<input type="text" name="search" class="searchinput" placeholder="Type here for Searching ...">		
 			<div class="searchbutton">
 				<button type="submit" class="btn btn-light"><span>Search</span></button>
@@ -238,7 +238,7 @@
                     $sql="DELETE FROM cart WHERE productid=$prodid and CusId=$idc";
                     delete($sql);
                 ?>
-                  <meta http-equiv="Refresh" name="" content="0;URL=./home.php">
+                  <meta http-equiv="Refresh" name="" content="0;URL=./index.php">
                 <?php
                   }
                    
@@ -249,7 +249,7 @@
                      $sql="UPDATE cart SET Qty=$qty WHERE productid=$prouid and CusId=$idc";
                      update($sql);
                   ?>
-                    <meta http-equiv="Refresh" name="" content="0;URL=./home.php">
+                    <meta http-equiv="Refresh" name="" content="0;URL=./index.php">
                   <?php
                    }
                      
@@ -263,7 +263,7 @@
                      $sql="INSERT into cart(CusId,Productid,Qty) values($idc,$procart,1)";
                       insert($sql); 
                 ?>
-                  <meta http-equiv="Refresh" name="" content="0;URL=./home.php">
+                  <meta http-equiv="Refresh" name="" content="0;URL=./index.php">
                 <?php
                     }
                 
@@ -281,7 +281,7 @@
                     $tablez=query($sql);
                     
                 ?>
-                <form action="./home.php?prouid=<?=$cartz[$i][1]?>">
+                <form action="./index.php?prouid=<?=$cartz[$i][1]?>">
                   <div class="row" style="border: 1px solid black;">
                     <div class="col-2"><?=$tablez[0][1]?></div>
                     <div class="col-3"><a href="./product.php?proid=<?=$p?>"><img style="width: 100%;height: 100%;" src="<?=$tablez[0][2]?>"></a></div>
@@ -291,7 +291,7 @@
                       <input type="text" style="width: 100%;"name="qty" value="<?=$cartz[$i][2]?>">
                     </div>
                     <div class="col-2">
-                      <a href="./home.php?prouid=<?=$cartz[$i][1]?>"><button type="submit" class="btn btn-danger">Update</button></a>
+                      <a href="./index.php?prouid=<?=$cartz[$i][1]?>"><button type="submit" class="btn btn-danger">Update</button></a>
                     </div>
                     <div class="col-2">
                       <a href="<?=$_SERVER['PHP_SELF']?>?<?=$_SERVER['QUERY_STRING']?>&prodid=<?=$cartz[$i][1]?>"><button type="button" class="btn btn-danger">Delete</button></a>
@@ -395,7 +395,7 @@
                     $sql="UPDATE customer SET FullName='$acountt[0]',Address='$acountt[1]',Phone='$acountt[2]',Email='$acountt[3]' WHERE CusId=$idb";
                     update($sql);
                   ?>
-                  <meta http-equiv="Refresh" name="" content="0;URL=./home.php">
+                  <meta http-equiv="Refresh" name="" content="0;URL=./index.php">
                   <?php
                   }
                   else
@@ -403,14 +403,14 @@
                     $sql="INSERT into customer(CusID,FullName,Address,Phone,Email) values('$idb','$acountt[0]','$acountt[1]','$acountt[2]','$acountt[3]')";
                     insert($sql);
                   ?>
-                  <meta http-equiv="Refresh" name="" content="0;URL=./home.php">
+                  <meta http-equiv="Refresh" name="" content="0;URL=./index.php">
                   <?php
                   }
                 }
 
               }
                ?>
-              <form action="./home.php" method="post">
+              <form action="./index.php" method="post">
                 <table>
                   <tr>
                     <td>ID:</td>

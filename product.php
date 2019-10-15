@@ -19,13 +19,13 @@ require_once("./funtion.php");
 	<div class="menu">
 		<ul>
 			<li class="badge badge-secondary">Categories</li>
-			<li class="badge badge-info"><a href="./home.php?catid=1">Foods</a></li>
-			<li class="badge badge-info"><a href="./home.php?catid=2">Drinks</a></li>
-			<li class="badge badge-info"><a href="./home.php?catid=3">Electrics</a></li>
-			<li class="badge badge-info"><a href="./home.php?catid=4">Wears</a></li>
-			<li class="badge badge-info"><a href="./home.php?catid=5">Shoes</a></li>
-			<li class="badge badge-info"><a href="./home.php?catid=6">Vehicle</a></li>
-			<li class="badge badge-info"><a href="./home.php?catid=7">Sports</a></li>
+			<li class="badge badge-info"><a href="./index.php?catid=1">Foods</a></li>
+			<li class="badge badge-info"><a href="./index.php?catid=2">Drinks</a></li>
+			<li class="badge badge-info"><a href="./index.php?catid=3">Electrics</a></li>
+			<li class="badge badge-info"><a href="./index.php?catid=4">Wears</a></li>
+			<li class="badge badge-info"><a href="./index.php?catid=5">Shoes</a></li>
+			<li class="badge badge-info"><a href="./index.php?catid=6">Vehicle</a></li>
+			<li class="badge badge-info"><a href="./index.php?catid=7">Sports</a></li>
 		</ul>
 	</div>
 	<div class="row">

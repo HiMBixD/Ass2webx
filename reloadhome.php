@@ -2,5 +2,5 @@
 require_once("./funtion.php");
 ?>
 <?php 
-   header ("Location: home.php");
+   header ("Location: index.php");
  ?> 
