@@ -4,7 +4,7 @@ $db = parse_url(getenv("DATABASE_URL"));
 	
 		
 			$sqlx = "SELECT * from product where productid=10";
-            $producttable = query($sqlx,$producttable);
+            $producttable = query($sqlx);
 
  ?>
  <li><?=$producttable[0]?></li>

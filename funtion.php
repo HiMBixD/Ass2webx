@@ -1,6 +1,6 @@
 <?php 
 	
-	function query($sql,$result)
+	function query($sql)
 	{
 		$db = parse_url(getenv("DATABASE_URL"));
 	
@@ -13,10 +13,7 @@
 			    ltrim($db["path"], "/")
 											)
 						);
-		
-			$productid=$_GET['proid'];
-			$sqlx = "SELECT * from product where productid = $productid";
-			$stmt1= $pdo->prepare($sqlx);
+			$stmt1= $pdo->prepare($sql);
             $stmt1->execute();
             $result =$stmt1->fetchAll();
             return $result;
