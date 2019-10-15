@@ -10,13 +10,12 @@ $db = parse_url(getenv("DATABASE_URL"));
 			    ltrim($db["path"], "/")
 											)
 						);
-		
-			$productid=$_GET['proid'];
+
 			$sqlx = "SELECT * from product where ProductId = 10";
             $stmt1= $pdo->prepare($sqlx);
             $stmt1->setFetchMode(PDO::FETCH_ASSOC);
             $stmt1->execute();
-            $producttable = pg_fetch_all($stmt1);
+            $producttable =$stmt1->fetchAll();
             echo "zxc"."<li> <?=$producttable[0][0]?> </li>";
             echo "<li> <?=$producttable[0][1]?> </li>";
             echo "<li> <?=$producttable[1][0]?> </li>";
