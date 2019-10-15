@@ -3,8 +3,8 @@ require_once("funtion.php");
 $db = parse_url(getenv("DATABASE_URL"));
 	
 		
-			$sql = "SELECT * from product where productid=10";
-            $producttable = query($sql)
+			$sqlx = "SELECT * from product where productid=10";
+            $producttable = query($sqlx);
 
  ?>
  <li><?=$producttable[0]?></li>
