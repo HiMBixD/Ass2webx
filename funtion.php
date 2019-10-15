@@ -33,7 +33,6 @@
 									)
 				);
 		$stmt= $pdo->prepare($sql);
-		$stmt->setFetchMode(PDO::FETCH_ASSOC);
 		$stmt->execute();
 	}
 	function update($sql)
@@ -50,7 +49,6 @@
 									)
 				);
 		$stmt= $pdo->prepare($sql);
-		$stmt->setFetchMode(PDO::FETCH_ASSOC);
 		$stmt->execute();
 		
 	}
@@ -68,7 +66,6 @@
 									)
 				);
 		$stmt= $pdo->prepare($sql);
-		$stmt->setFetchMode(PDO::FETCH_ASSOC);
 		$stmt->execute();
 		
 	}
