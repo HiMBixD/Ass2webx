@@ -17,5 +17,5 @@ $db = parse_url(getenv("DATABASE_URL"));
             $stmt1->setFetchMode(PDO::FETCH_ASSOC);
             $stmt1->execute();
             $producttable = pg_fetch_all($stmt1);
-            echo "$producttable";
+            echo "zxc"+"<li> $producttable </li>";
  ?>
