@@ -46,11 +46,10 @@ require_once("./funtion.php");
 						);
 		
 			$productid=$_GET['proid'];
-			$sqlx = "SELECT * from product where ProductId = $productid";
-            $stmt1= $pdo->prepare($sqlx);
-            $stmt1->setFetchMode(PDO::FETCH_ASSOC);
+			$sqlx = "SELECT * from product where productid = $productid";
+			$stmt1= $pdo->prepare($sqlx);
             $stmt1->execute();
-            $producttable = pg_fetch_all($stmt1);		
+            $producttable =$stmt1->fetchAll();		
 		}	
 			
 		?>
