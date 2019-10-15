@@ -14,7 +14,7 @@ $db = parse_url(getenv("DATABASE_URL"));
 			$sqlx = "SELECT * from product where ProductId = 10";
             $stmt1= $pdo->prepare($sqlx);
             $stmt1->execute();
-            $producttable =$stmt1->fetchAll();
+            $producttable =$stmt1->fetch();
             echo "zxc"."<li> $producttable[0][productid] </li>";
             echo "<li> $producttable[0][productname] </li>";
             echo "<li> $producttable[1][0] </li>";
