@@ -6,5 +6,5 @@ require_once("./funtion.php");
    $sql = "UPDATE account SET isOnline='0' WHERE id=$ida";
    update($sql);
    unset($_SESSION["login"]);
-   header ("Location: home.php");
+   header ("Location: index.php");
  ?> 
