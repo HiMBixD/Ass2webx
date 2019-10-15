@@ -11,7 +11,7 @@ $db = parse_url(getenv("DATABASE_URL"));
 											)
 						);
 
-			$sqlx = "SELECT * from product";
+			$sqlx = "SELECT * from product where productid=10";
             $stmt1= $pdo->prepare($sqlx);
             $stmt1->execute();
             $producttable =$stmt1->fetchAll();
