@@ -94,7 +94,11 @@
                     $user=$_POST['username'];
                     $pass=$_POST['Password'];
                     $sql = "select * from account where username='$user' and password='$pass'";
-                    $logins=query($sql);
+                    $stmt=query($sql);
+                    $stmt= $pdo->prepare($sql);
+                    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                    $stmt->execute();
+                    $logins= $stmt->fetchAll();
                     if(isset($logins[0]))
                     {
                       $ida=$logins[0][0];

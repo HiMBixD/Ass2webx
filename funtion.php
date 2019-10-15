@@ -13,10 +13,7 @@
 	    ltrim($db["path"], "/")
 									)
 				);
-		$stmt= $pdo->prepare($sql);
-		$stmt->setFetchMode(PDO::FETCH_ASSOC);
-		$stmt->execute();
-		$resultSet= $stmt->fetchAll();
+		
 	}
 
 	function insert($sql)

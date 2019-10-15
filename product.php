@@ -36,7 +36,11 @@ require_once("./funtion.php");
 			$productid=$_GET['proid'];		
 		}	
 			$sql = "select * from product where ProductId = $productid";
-		 	$producttable=query($sql);
+		 	$stmt1=query($sql);
+            $stmt1= $pdo->prepare($sql);
+            $stmt1->setFetchMode(PDO::FETCH_ASSOC);
+            $stmt1->execute();
+            $producttable= $stmt1->fetchAll();
 		?>
 		<div class="col-6" align="center">
 			<div class="productid"><h5>Product ID: <?=$producttable[0][0]?></h5></div>
