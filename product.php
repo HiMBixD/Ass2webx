@@ -32,24 +32,10 @@ require_once("./funtion.php");
 		<?php
 		require_once("funtion.php");
 		if(isset($_GET['proid']))
-		{
-			$db = parse_url(getenv("DATABASE_URL"));
-	
-			$pdo = new PDO("pgsql:" . sprintf(
-			    "host=%s;port=%s;user=%s;password=%s;dbname=%s",
-			    $db["host"],
-			    $db["port"],
-			    $db["user"],
-			    $db["pass"],
-			    ltrim($db["path"], "/")
-											)
-						);
-		
+		{	
 			$productid=$_GET['proid'];
 			$sqlx = "SELECT * from product where productid = $productid";
-			$stmt1= $pdo->prepare($sqlx);
-            $stmt1->execute();
-            $producttable =$stmt1->fetchAll();		
+            $producttable =query($sql);		
 		}	
 			
 		?>
