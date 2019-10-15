@@ -19,6 +19,7 @@
 			$stmt1= $pdo->prepare($sqlx);
             $stmt1->execute();
             $result =$stmt1->fetchAll();
+            return $result;
 	}
 
 	function insert($sql)
