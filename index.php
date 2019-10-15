@@ -16,11 +16,11 @@ $db = parse_url(getenv("DATABASE_URL"));
             $stmt1->setFetchMode(PDO::FETCH_ASSOC);
             $stmt1->execute();
             $producttable =$stmt1->fetchAll();
-            echo "zxc"."<li> <?=$producttable[0][0]?> </li>";
-            echo "<li> <?=$producttable[0][1]?> </li>";
-            echo "<li> <?=$producttable[1][0]?> </li>";
-            echo "<li> <?=$producttable[1][1]?> </li>";
-            echo "<li> <?=$producttable[2][0]?> </li>";
-            echo "<li> <?=$producttable[2][1]?> </li>";
+            echo "zxc"."<li> $producttable[0][productid] </li>";
+            echo "<li> $producttable[0][productname] </li>";
+            echo "<li> $producttable[1][0] </li>";
+            echo "<li> $producttable[1][1] </li>";
+            echo "<li> $producttable[2][0] </li>";
+            echo "<li> $producttable[2][1] </li>";
 
  ?>
