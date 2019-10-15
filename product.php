@@ -42,7 +42,7 @@ require_once("./funtion.php");
 		<div class="col-6" align="center">
 			<div class="productid"><h5>Product ID: <?=$producttable[0][0]?></h5></div>
 			<div class="productname"><h5>Name: <?=$producttable[0][1]?></h5></div>
-			<div class="productimg"><img src="./<?=$producttable[0][2]?>"></div>
+			<div class="productimg"><img src="<?=$producttable[0][2]?>"></div>
 			<div class="productprice">
 				<h5>Price: <?=$producttable[0][3]?>$<a href="<?=$_SERVER['PHP_SELF']?>?<?=$_SERVER['QUERY_STRING']?>&addcart=1">
 					<button type="button" class="btn btn-info">Add</button>
