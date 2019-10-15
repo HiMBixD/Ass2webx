@@ -14,7 +14,7 @@ $db = parse_url(getenv("DATABASE_URL"));
 			$sqlx = "SELECT * from product";
             $stmt1= $pdo->prepare($sqlx);
             $stmt1->execute();
-            $producttable =$stmt1->fetch();
+            $producttable =$stmt1->pg_fetch_all_columns();
 
  ?>
  <li><?=$producttable[0]?></li>
