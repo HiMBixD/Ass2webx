@@ -15,11 +15,11 @@ $db = parse_url(getenv("DATABASE_URL"));
             $stmt1= $pdo->prepare($sqlx);
             $stmt1->execute();
             $producttable =$stmt1->fetch();
-            echo "zxc"."<li> $producttable[0][productid] </li>";
-            echo "<li> $producttable[0][productname] </li>";
-            echo "<li> $producttable[1][0] </li>";
-            echo "<li> $producttable[1][1] </li>";
-            echo "<li> $producttable[2][0] </li>";
-            echo "<li> $producttable[2][1] </li>";
 
  ?>
+ <li><?=$producttable[0][0]?></li>
+ <li><?=$producttable[0][1]?></li>
+ <li><?=$producttable[1][0]?></li>
+ <li><?=$producttable[1][1]?></li>
+ <li><?=$producttable[2][0]?></li>
+ <li><?=$producttable[2][1]?></li>
