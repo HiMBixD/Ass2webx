@@ -1,20 +1,10 @@
 <?php 
+require_once("funtion.php");
 $db = parse_url(getenv("DATABASE_URL"));
 	
-			$pdo = new PDO("pgsql:" . sprintf(
-			    "host=%s;port=%s;user=%s;password=%s;dbname=%s",
-			    $db["host"],
-			    $db["port"],
-			    $db["user"],
-			    $db["pass"],
-			    ltrim($db["path"], "/")
-											)
-						);
-
-			$sqlx = "SELECT * from product where productid=10";
-            $stmt1= $pdo->prepare($sqlx);
-            $stmt1->execute();
-            $producttable =$stmt1->fetchAll();
+		
+			$sql = "SELECT * from product where productid=10";
+            $producttable = query($sql)
 
  ?>
  <li><?=$producttable[0]?></li>
