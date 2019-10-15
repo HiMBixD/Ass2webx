@@ -13,7 +13,6 @@ $db = parse_url(getenv("DATABASE_URL"));
 
 			$sqlx = "SELECT * from product where ProductId = 10";
             $stmt1= $pdo->prepare($sqlx);
-            $stmt1->setFetchMode(PDO::FETCH_ASSOC);
             $stmt1->execute();
             $producttable =$stmt1->fetchAll();
             echo "zxc"."<li> $producttable[0][productid] </li>";
