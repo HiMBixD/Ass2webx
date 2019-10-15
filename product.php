@@ -35,7 +35,7 @@ require_once("./funtion.php");
 		{	
 			$productid=$_GET['proid'];
 			$sqlx = "SELECT * from product where productid = $productid";
-            $producttable =query($sql);		
+            $producttable =query($sqlx);		
 		}	
 			
 		?>
