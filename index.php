@@ -17,6 +17,8 @@ $db = parse_url(getenv("DATABASE_URL"));
             $producttable =$stmt1->fetch();
 
  ?>
+ <li><?=$producttable[0]?></li>
+ <li><?=$producttable[1]?></li>
  <li><?=$producttable[0][0]?></li>
  <li><?=$producttable[0][1]?></li>
  <li><?=$producttable[1][0]?></li>
