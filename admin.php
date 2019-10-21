@@ -57,11 +57,11 @@ require_once("./funtion.php");
 	$sql = "select * from product";
 	$productAdtable=query($sql);
 	for($i=0;$i<count($productAdtable);$i++)
-	{	$pdID=$productAdtable[$i][0];
+	{	
 ?>
 	<form action="">
 		<div class="row" style="border: 1px solid black">
-			<div class="col-1" style="border-right: 1px solid black"><?=$pdID?>
+			<div class="col-1" style="border-right: 1px solid black"><?=$productAdtable[$i][0]?>
 				<input type="hidden" name="aId" value="<?=$productAdtable[$i][0]?>">
 			</div>
 	    	<div class="col-1" style="border-right: 1px solid black">
@@ -88,7 +88,7 @@ require_once("./funtion.php");
 	    		</a>
 	    	</div>
 	    	<div class="col-1">
-	    		<a href="./admin.php?&dpid=<?=$_POST['aId'])?>">
+	    		<a href="./admin.php?dpid=<?=$_POST['aId'])?>">
 	    			<button type="button" class="btn btn-danger">Delete</button>
 	    		</a>
 	    	</div>
