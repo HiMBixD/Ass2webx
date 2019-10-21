@@ -57,7 +57,7 @@ require_once("./funtion.php");
 	$sql = "select * from product";
 	$productAdtable=query($sql);
 	for($i=0;$i<count($productAdtable);$i++)
-	{	
+	{
 ?>
 	<form action="">
 		<div class="row" style="border: 1px solid black">
@@ -88,7 +88,7 @@ require_once("./funtion.php");
 	    		</a>
 	    	</div>
 	    	<div class="col-1">
-	    		<a href="./admin.php?dpid=<?=$_POST['aId'])?>">
+	    		<a href="./admin.php?<?=$_SERVER['QUERY_STRING']?>&dpid=<?=$productAdtable[$i][0]?>">
 	    			<button type="button" class="btn btn-danger">Delete</button>
 	    		</a>
 	    	</div>
