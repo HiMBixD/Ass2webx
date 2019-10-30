@@ -34,7 +34,7 @@ require_once("./funtion.php");
 		if(isset($_GET['proid']))
 		{	
 			$productid=$_GET['proid'];
-			$sqlx = "SELECT * from product where productid = $productid";
+			$sqlx = "SELECT * from product where productid = $productid order by productid";
             $producttable =query($sqlx);		
 		}	
 			

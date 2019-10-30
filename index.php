@@ -34,7 +34,7 @@ require_once("./funtion.php");
 	if(isset($_GET['catid']))
 	{
 		$cid=$_GET['catid'];
-		$sql = "select * from product where CatId=$cid";
+		$sql = "select * from product where CatId=$cid order by productid";
 	 	$producttable=query($sql);
 
 		if (isset($_GET['pageid'])) 
@@ -64,7 +64,7 @@ require_once("./funtion.php");
 	elseif (isset($_GET['search'])) 
 	{
 		$search=$_GET['search'];
-		$sql = "select * from product where productname like '%$search%'";
+		$sql = "select * from product where productname like '%$search%' order by productid";
 	 	$producttable=query($sql);
 	 	if (isset($_GET['pageid'])) 
 		{
@@ -90,7 +90,7 @@ require_once("./funtion.php");
 	}	
 	else
 	{
-		$sql = "select * from product";
+		$sql = "select * from product order by productid";
 	 	$producttable=query($sql);
 	 	if (isset($_GET['pageid'])) 
 		{
