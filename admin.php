@@ -54,7 +54,7 @@ require_once("./funtion.php");
 		$sql ="INSERT into product(productid,productname,image,price,catid,productinfo) values ($adId,'$adName','$adUrl',$adPrice,$adCatid,'$adDesc')";
 		insert($sql);
 	} 
-	$sql = "select * from product";
+	$sql = "select * from product order by productid";
 	$productAdtable=query($sql);
 	for($i=0;$i<count($productAdtable);$i++)
 	{
