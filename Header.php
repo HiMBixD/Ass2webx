@@ -153,8 +153,7 @@
                 }
                 else
                 {
-
-                  echo '<script>alert("Password do not match!")</script>'
+                  echo "<div>Password do not match</div>";
                 }
               }
                ?>
